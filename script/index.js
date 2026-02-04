@@ -1,17 +1,14 @@
-
-
-
 function login () {
-    const email = document.getElementById("email").value
-    const passaword = document.getElementById("passaword").value
+const email = document.getElementById("email").value
+const password = document.getElementById("password").value
 
-    console.log(email)
-    console.log(passaword)
+console.log(email)
+console.log(password)
 
-    if (email === "samuelbatistam3@gmail.com" && passaword === "1234") {
-        alert("login efetuado com sucesso")
-        window.location.href = "/pages/dashboard.html"
-    } else {
-        alert("Email ou senha incorretos")
-    }
+if (email === "samuelbatistam3@gmail.com" && password === "1234") {
+  alert("Login efetuado com sucesso")
+  window.location.href = "/pages/dashboard.html"
+} else {
+  alert("Email ou senha incorretos")
+}
 }
