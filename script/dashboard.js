@@ -1,12 +1,5 @@
 let carrossel = document.getElementById('carrossel')
-let listanavbar = document.getElementById(|'lista-navbar')
-
-let cursosPlus = {
-
-}
-
-for (let)
-
+let listanavbar = document.getElementById('lista-navbar')
 
 let cursosPlus = [
   {
@@ -52,9 +45,6 @@ let cursosPlus = [
   
 ]
 
-let carrossel = document.getElementById('carrossel')
-
-
 for (let i = 0; i < cursosPlus.length; i++) {
   carrossel.innerHTML +=  `
   <div id="slide${cursosPlus[i].id}" class="carousel-item relative w-full flex justify-between">
@@ -78,20 +68,60 @@ for (let i = 0; i < cursosPlus.length; i++) {
 
   
 }
-  
-let cursosPlus
-
-for (let 1 = 0; i < cursosPlus.length; i++) {
-
-}
 
 let navegacao = [
   {
-    nome = "Quem somos"
-  }
+    nome: "Quem Somos",
+  },
   {
-    nome = "Nossos cursos"
-    submenu: ["Formações", "Formação", " Formação Avançada"]
-  }
+    nome: "Nossos cursos",
+    submenu: ["Formações", "Curta e Média Duração"]
+  },
+  {
+    nome: "Pós Graduação",
+    submenu: ["MBA em negócios", "MBA em tecnologia"]
+  },
 ]
- 
+
+
+let htmlNav = ""
+
+navegacao.forEach((item)=> {
+  
+  if (item.submenu) {
+    htmlNav = <li>
+      <details>
+        <summary>${item.nome}</summary>
+        <ul class=''>
+
+        </ul>
+      </details>
+    </li>
+  }
+})
+
+
+
+navegacao.map((item)=> (
+
+  
+
+  listanavbar.innerHTML += `
+  ${item.submenu ? (
+  <li class="bg-black text-white">  
+    <details>
+        <summary>${item.nome}</summary>
+        <ul class="p-2">
+          <li><a>${item.submenu[0]}</a></li>
+          <li><a>${item.submenu[1]}</a></li>
+        </ul>
+    </details>    
+  </li>
+  ) 
+  : 
+    (<li class="bg-black text-white"><a>${item.nome}</a></li>) }
+
+  `
+))
+
+  
